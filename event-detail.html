@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Event Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Event Details</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="event-detail">
+        <h2>Music Concert</h2>
+        <p><strong>Date:</strong> October 20, 2024</p>
+        <p><strong>Time:</strong> 7:00 PM</p>
+        <p><strong>Location:</strong> Downtown Arena</p>
+        <p>
+            <strong>Description:</strong> Join us for an unforgettable night of music with top artists from around the country. Enjoy live performances, food stalls, and a vibrant atmosphere. Don't miss out on this exciting event!
+        </p>
+        <p>
+            <strong>Price:</strong> $50 per ticket
+        </p>
+        <button onclick="registerForEvent()">Register Now</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Event Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function registerForEvent() {
+            alert("You have successfully registered for the Music Concert! Check your profile for more details.");
+        }
+    </script>
+</body>
+</html>
