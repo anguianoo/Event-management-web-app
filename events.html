@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Event Listings</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="event-search">
+        <h2>Find Your Event</h2>
+        <input type="text" id="eventSearch" placeholder="Search for events..." onkeyup="filterEvents()">
+    </section>
+
+    <section class="event-list">
+        <h2>All Events</h2>
+        <div id="eventContainer">
+            <div class="event-card">
+                <h3>Music Concert</h3>
+                <p>Date: October 20, 2024</p>
+                <p>Location: Downtown Arena</p>
+                <a href="event-detail.html">View Details</a>
+            </div>
+            <div class="event-card">
+                <h3>Startup Workshop</h3>
+                <p>Date: October 25, 2024</p>
+                <p>Location: Innovation Hub</p>
+                <a href="event-detail.html">View Details</a>
+            </div>
+            <div class="event-card">
+                <h3>Art Exhibition</h3>
+                <p>Date: November 1, 2024</p>
+                <p>Location: Art Museum</p>
+                <a href="event-detail.html">View Details</a>
+            </div>
+            <div class="event-card">
+                <h3>Food Festival</h3>
+                <p>Date: November 5, 2024</p>
+                <p>Location: City Park</p>
+                <a href="event-detail.html">View Details</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Event Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function filterEvents() {
+            const searchInput = document.getElementById('eventSearch').value.toLowerCase();
+            const eventCards = document.getElementsByClassName('event-card');
+            
+            for (let i = 0; i < eventCards.length; i++) {
+                const card = eventCards[i];
+                const eventName = card.getElementsByTagName('h3')[0].textContent.toLowerCase();
+                
+                if (eventName.includes(searchInput)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
