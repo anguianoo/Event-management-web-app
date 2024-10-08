@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Admin Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="admin-section">
+        <h2>Manage Events</h2>
+        <button onclick="showAddEventForm()">Add New Event</button>
+        <div id="addEventForm" style="display: none;">
+            <h3>Add New Event</h3>
+            <form>
+                <label for="eventName">Event Name:</label>
+                <input type="text" id="eventName" name="eventName" required><br>
+                <label for="eventDate">Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required><br>
+                <label for="eventLocation">Location:</label>
+                <input type="text" id="eventLocation" name="eventLocation" required><br>
+                <label for="eventDescription">Description:</label><br>
+                <textarea id="eventDescription" name="eventDescription" rows="4" required></textarea><br>
+                <button type="submit" onclick="addEvent()">Submit</button>
+            </form>
+        </div>
+
+        <h3>All Events</h3>
+        <div class="event-card">
+            <h3>Music Concert</h3>
+            <p>Date: October 20, 2024</p>
+            <p>Location: Downtown Arena</p>
+            <button onclick="editEvent()">Edit</button>
+            <button onclick="deleteEvent()">Delete</button>
+        </div>
+        <div class="event-card">
+            <h3>Startup Workshop</h3>
+            <p>Date: October 25, 2024</p>
+            <p>Location: Innovation Hub</p>
+            <button onclick="editEvent()">Edit</button>
+            <button onclick="deleteEvent()">Delete</button>
+        </div>
+    </section>
+
+    <section class="admin-section">
+        <h2>Manage Users</h2>
+        <div class="user-card">
+            <p><strong>Username:</strong> JohnDoe</p>
+            <p><strong>Email:</strong> johndoe@example.com</p>
+            <button onclick="deleteUser()">Delete User</button>
+        </div>
+        <div class="user-card">
+            <p><strong>Username:</strong> JaneDoe</p>
+            <p><strong>Email:</strong> janedoe@example.com</p>
+            <button onclick="deleteUser()">Delete User</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Event Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showAddEventForm() {
+            const form = document.getElementById('addEventForm');
+            form.style.display = form.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function addEvent() {
+            alert('Event added successfully!');
+            // Add logic to send event data to the server
+        }
+
+        function editEvent() {
+            alert('Edit event functionality goes here.');
+            // Add logic to edit event data
+        }
+
+        function deleteEvent() {
+            alert('Event deleted successfully!');
+            // Add logic to delete the event from the database
+        }
+
+        function deleteUser() {
+            alert('User deleted successfully!');
+            // Add logic to delete the user from the database
+        }
+    </script>
+</body>
+</html>
