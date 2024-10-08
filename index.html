@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Event Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Find and Manage Your Favorite Events</h2>
+        <p>Discover upcoming events and manage your registrations all in one place.</p>
+        <button onclick="showAlert()">Learn More</button>
+    </section>
+
+    <section class="featured-events">
+        <h2>Featured Events</h2>
+        <div class="event-card">
+            <h3>Music Concert</h3>
+            <p>Date: October 20, 2024</p>
+            <p>Location: Downtown Arena</p>
+            <a href="event-detail.html">View Details</a>
+        </div>
+        <div class="event-card">
+            <h3>Startup Workshop</h3>
+            <p>Date: October 25, 2024</p>
+            <p>Location: Innovation Hub</p>
+            <a href="event-detail.html">View Details</a>
+        </div>
+        <div class="event-card">
+            <h3>Art Exhibition</h3>
+            <p>Date: November 1, 2024</p>
+            <p>Location: Art Museum</p>
+            <a href="event-detail.html">View Details</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Event Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert("Welcome to the Event Management System! Here, you can find, register, and manage events.");
+        }
+    </script>
+</body>
+</html>
