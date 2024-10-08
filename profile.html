@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>User Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="admin.html">Admin Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="profile">
+        <h2>Profile Information</h2>
+        <p><strong>Username:</strong> JohnDoe</p>
+        <p><strong>Email:</strong> johndoe@example.com</p>
+        <p><strong>Member Since:</strong> January 1, 2023</p>
+    </section>
+
+    <section class="registered-events">
+        <h2>Registered Events</h2>
+        <div class="event-card">
+            <h3>Music Concert</h3>
+            <p>Date: October 20, 2024</p>
+            <p>Location: Downtown Arena</p>
+            <a href="event-detail.html">View Event Details</a>
+        </div>
+        <div class="event-card">
+            <h3>Startup Workshop</h3>
+            <p>Date: October 25, 2024</p>
+            <p>Location: Innovation Hub</p>
+            <a href="event-detail.html">View Event Details</a>
+        </div>
+        <div class="event-card">
+            <h3>Art Exhibition</h3>
+            <p>Date: November 1, 2024</p>
+            <p>Location: Art Museum</p>
+            <a href="event-detail.html">View Event Details</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Event Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function loadProfile() {
+            // This function can later be used to fetch user data from the server.
+            console.log("Profile data loaded.");
+        }
+
+        // Load profile data when the page loads.
+        window.onload = loadProfile;
+    </script>
+</body>
+</html>
