@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -27,6 +28,11 @@ nav ul li a {
     text-decoration: none;
 }
 
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+/* Hero Section */
 .hero {
     background-color: #007bff;
     color: #fff;
@@ -43,113 +49,30 @@ nav ul li a {
     color: #007bff;
     border: none;
     padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.featured-events {
-    padding: 20px;
-    background-color: #fff;
+.hero button:hover {
+    background-color: #e9ecef;
 }
 
-.event-card {
-    background-color: #eee;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
+/* Event Listings & Cards */
 .event-list {
     padding: 20px;
+    background-color: #fff;
 }
 
-.event-card {
+.event-card, .user-card {
     background-color: #eee;
     margin: 10px 0;
     padding: 15px;
     border-radius: 5px;
     border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.event-search {
-    padding: 20px;
-    background-color: #fff;
-    text-align: center;
-}
-
-.event-search input {
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.event-detail {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.event-detail h2 {
-    margin-bottom: 10px;
-}
-
-.event-detail p {
-    margin: 5px 0;
-}
-
-.event-detail button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.event-detail button:hover {
-    background-color: #0056b3;
-}
-
-
-.profile {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.registered-events {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.event-card {
-    background-color: #eee;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.event-card h3 {
+.event-card h3, .user-card p {
     margin: 0;
 }
 
@@ -168,7 +91,23 @@ footer {
     text-decoration: underline;
 }
 
-.admin-section {
+.event-search {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.event-search input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Profile Page */
+.profile, .registered-events {
     padding: 20px;
     background-color: #fff;
     margin: 20px;
@@ -176,30 +115,13 @@ footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.event-card, .user-card {
-    background-color: #eee;
-    margin: 10px 0;
-    padding: 15px;
+/* Admin Page */
+.admin-section {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
     border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-.event-card h3, .user-card p {
-    margin: 0;
-}
-
-.event-card button, .user-card button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-right: 5px;
-}
-
-.event-card button:hover, .user-card button:hover {
-    background-color: #0056b3;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #addEventForm {
@@ -231,3 +153,36 @@ footer {
     background-color: #218838;
 }
 
+.event-card button, .user-card button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.event-card button:hover, .user-card button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Utility Classes */
+.hidden {
+    display: none;
+}
+
+.center {
+    text-align: center;
+}
